@@ -5,7 +5,7 @@
 # See LICENSE.TXT for details.
 
 - name: Configure ansible control node
-  hosts: devops-node
+  hosts: all
   become: true
 
   vars_files:
