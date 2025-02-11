@@ -248,11 +248,7 @@
         become_user: awx
         ignore_errors: true
         changed_when: awx_password.stdout is not search('is already taken')
-      
-      - name: Print the AWX admin password
-        ansible.builtin.debug:
-          var: awx_password
-        when: debug_enabled
+    
       
       - name: Generate an OpenSSL private key with a different size (2048 bits)
         community.crypto.openssl_privatekey:
