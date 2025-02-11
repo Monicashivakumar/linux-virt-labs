@@ -7,3 +7,4 @@ collections:
   - name: community.postgresql
   - name: oracle.oci
   - name: containers.podman
+  - name: community.crypto
