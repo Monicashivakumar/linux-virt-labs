@@ -133,7 +133,7 @@
         ansible.builtin.dnf:
           name: oraclelinux-automation-manager-release-el8
           state: present
-        when: ansible_distribution == 'OracleLinux' and ansible_distribution_major_version == '8'
+        
       
       - name: Disable Oracle Linux Automation Manager 1.0 repository
         community.general.ini_file:
@@ -142,7 +142,7 @@
           option: enabled
           value: "0"
           mode: '0644'
-        when: ansible_distribution == 'OracleLinux' and ansible_distribution_major_version == '8'
+       
       
       - name: Disable Oracle Linux Automation Manager 2.0 repository
         community.general.ini_file:
@@ -151,7 +151,7 @@
           option: enabled
           value: "0"
           mode: '0644'
-        when: ansible_distribution == 'OracleLinux' and ansible_distribution_major_version == '8'
+      
       
       - name: Enable Oracle Linux Automation Manager 2.2 repository
         community.general.ini_file:
@@ -160,13 +160,12 @@
           option: enabled
           value: "1"
           mode: '0644'
-        when: ansible_distribution == 'OracleLinux' and ansible_distribution_major_version == '8'
-      
+     
       - name: Install Oracle Linux Automation Manager
         ansible.builtin.dnf:
           name: ol-automation-manager
           state: present
-        when: ansible_distribution == 'OracleLinux' and ansible_distribution_major_version == '8'
+        
       
       - name: Edit unixsocket in /etc/redis.conf
         ansible.builtin.lineinfile:
