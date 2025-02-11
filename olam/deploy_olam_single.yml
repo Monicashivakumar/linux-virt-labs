@@ -25,7 +25,7 @@
         when: ansible_distribution == 'OracleLinux' and ansible_distribution_major_version == '8'
       
       - name: Version lock python3-click
-        community.general.yum_versionlock:
+        yum_versionlock:
           state: present
           name: python3-click
       
