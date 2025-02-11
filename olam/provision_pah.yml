@@ -5,7 +5,7 @@
 # See LICENSE.TXT for details.
 
 - name: Configure Private Automation Hub
-  hosts: ol-pah
+  hosts: all
   become: true
 
   vars_files:
