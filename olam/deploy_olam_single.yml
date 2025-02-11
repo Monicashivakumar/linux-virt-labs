@@ -35,8 +35,7 @@
             - python3-pip
           enablerepo: ol8_developer_EPEL
           state: present
-        when: ansible_distribution == 'OracleLinux' and ansible_distribution_major_version == '8'
-      
+       
       - name: Install pexpect using pip
         ansible.builtin.pip:
           name: pexpect
