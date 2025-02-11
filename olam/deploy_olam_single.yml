@@ -7,6 +7,9 @@
 - name: Deploy OLAM
   hosts: all
   gather_facts: false
+  collections:
+      - community.general
+      - community.postgresql
   tasks:
 
       - name: Install Oracle EPEL repository
