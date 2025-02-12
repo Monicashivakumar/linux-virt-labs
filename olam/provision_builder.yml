@@ -91,7 +91,7 @@
         dest: ~/my_custom_ee_project/requirements.yml
         mode: '0644'
       become: true
-      become_user: "{{ username }}"
+
 
     - name: Create requirements.txt
       ansible.builtin.template:
