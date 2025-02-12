@@ -14,7 +14,7 @@
   tasks:
 
 
-     - name: Install Oracle Linux Automation Manager repository
+    - name: Install Oracle Linux Automation Manager repository
       ansible.builtin.dnf:
         name: oraclelinux-automation-manager-release-el8
         state: present
