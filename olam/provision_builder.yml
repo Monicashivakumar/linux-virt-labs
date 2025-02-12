@@ -127,7 +127,7 @@
         state: directory
         mode: '0775'
       become: true
-      become_user: "{{ username }}"
+
 
     - name: Create playbook
       ansible.builtin.template:
@@ -135,7 +135,7 @@
         dest: /tmp/private/project/playbook.yml
         mode: '0644'
       become: true
-      become_user: "{{ username }}"
+  
 
     # - name: Test custom ee
     #   ansible.builtin.command: ansible-runner run --process-isolation --container-image=my_custom_ee -p playbook.yml /tmp/private
