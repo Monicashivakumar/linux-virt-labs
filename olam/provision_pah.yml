@@ -75,7 +75,6 @@
       args:
         chdir: ~/single_node
       become: true
-      become_user: "{{ username }}"
       register: pah_output
       changed_when: pah_output.rc != 0
 
