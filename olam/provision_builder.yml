@@ -13,36 +13,6 @@
 
   tasks:
 
-    - name: Install Oracle Linux Automation Manager repository
-      ansible.builtin.dnf:
-        name: oraclelinux-automation-manager-release-el8
-        state: present
-   
-    - name: Disable Oracle Linux Automation Manager 1.0 repository
-      community.general.ini_file:
-        path: "/etc/yum.repos.d/oraclelinux-automation-manager-ol8.repo"
-        section: ol8_automation
-        option: enabled
-        value: "0"
-        mode: '0644'
-  
-
-    - name: Disable Oracle Linux Automation Manager 2.0 repository
-      community.general.ini_file:
-        path: "/etc/yum.repos.d/oraclelinux-automation-manager-ol8.repo"
-        section: ol8_automation2
-        option: enabled
-        value: "0"
-        mode: '0644'
-   
-
-    - name: Enable Oracle Linux Automation Manager 2.2 repository
-      community.general.ini_file:
-        path: "/etc/yum.repos.d/oraclelinux-automation-manager-ol8.repo"
-        section: ol8_automation2.2
-        option: enabled
-        value: "1"
-        mode: '0644'
     
     - name: Install Oracle Linux Automation Manager Builder Utility
       ansible.builtin.dnf:
